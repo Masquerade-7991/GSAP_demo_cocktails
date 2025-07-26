@@ -19,55 +19,55 @@ const navLinks = [
 
 const cocktailLists = [
   {
-    name: "Long Island Iced Tea",
-    country: "IND",
-    detail: "Glass Bottle",
-    price: '₹499',
+    name: "Chapel Hill Shiraz",
+    country: "AU",
+    detail: "Battle",
+    price: "$10",
   },
   {
-    name: "Margarita",
-    country: "IND",
-    detail: "300ml",
-    price: '₹425',
+    name: "Caten Malbee",
+    country: "AU",
+    detail: "Battle",
+    price: "$49",
   },
   {
-    name: "Old Fashioned",
-    country: "IND",
-    detail: "Glass Bottle",
-    price: '₹520',
+    name: "Rhino Pale Ale",
+    country: "CA",
+    detail: "750 ml",
+    price: "$20",
   },
   {
-    name: "Cosmopolitan",
-    country: "IND",
-    detail: "250ml",
-    price: '₹399',
+    name: "Irish Guinness",
+    country: "IE",
+    detail: "600 ml",
+    price: "$29",
   },
 ];
 
 const mockTailLists = [
   {
-    name: "Negroni",
-    country: "IND",
-    detail: "Glass Bottle",
-    price: '₹475',
+    name: "Tropical Bloom",
+    country: "US",
+    detail: "Battle",
+    price: "$10",
   },
   {
-    name: "Daiquiri",
-    country: "IND",
-    detail: "300ml",
-    price: '₹380',
+    name: "Passionfruit Mint",
+    country: "US",
+    detail: "Battle",
+    price: "$49",
   },
   {
-    name: "Whiskey Sour",
-    country: "IND",
-    detail: "Glass Bottle",
-    price: '₹450',
+    name: "Citrus Glow",
+    country: "CA",
+    detail: "750 ml",
+    price: "$20",
   },
   {
-    name: "Martini",
-    country: "IND",
-    detail: "200ml",
-    price: '₹499',
+    name: "Lavender Fizz",
+    country: "IE",
+    detail: "600 ml",
+    price: "$29",
   },
 ];
 
@@ -134,7 +134,7 @@ const socials = [
   },
 ];
 
-const sliderLists = [
+const allCocktails = [
   {
     id: 1,
     name: "Classic Mojito",
@@ -179,5 +179,5 @@ export {
   openingHours,
   storeInfo,
   socials,
-  sliderLists,
+  allCocktails,
 };
