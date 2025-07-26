@@ -1,4 +1,3 @@
-import React from 'react'
 import { navLinks } from '../../constants/index.js';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -12,14 +11,18 @@ const Navbar = () => {
       }
     })
 
-    navTween.fromTo('nav', {
-      backgroundColor: 'transparent'
-    }, {
-        backgroundColor: '#000000',
-      backgroundFilter: 'blur(10px)',
+    navTween.fromTo(
+      "nav",
+      {
+        backgroundColor: "transparent",
+      },
+      {
+        backgroundColor: "##00000050",
+        backgroundFilter: "blur(10px)",
         duration: 1,
-        ease: 'power1.inOut'
-    });
+        ease: "power1.inOut",
+      }
+    );
   })
 
   return (
