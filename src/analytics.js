@@ -5,7 +5,7 @@ let analytics = null;
 export const getAnalytics = () => {
   if (!analytics) {
     analytics = new ClarityAnalytics({
-      projectId: "proj_321fc16b-a94a-440b-917e-f4b91de1db1c",
+      projectId: "proj_0f944761-16fd-4dc2-a814-626e96611cdf",
     });
   }
   return analytics;
