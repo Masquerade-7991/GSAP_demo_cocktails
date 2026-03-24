@@ -1,6 +1,7 @@
 import { navLinks } from '../../constants/index.js';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { getAnalytics } from "../analytics.js";
 
 const Navbar = () => {
   useGSAP(() => {
@@ -36,7 +37,7 @@ const Navbar = () => {
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`}>{link.title}</a>
+              <a href={`#${link.id}`} onClick={() => getAnalytics().track(`nav_${link.title}_clicked`, {link: link.title})}>{link.title}</a>
             </li>
           ))}
         </ul>
