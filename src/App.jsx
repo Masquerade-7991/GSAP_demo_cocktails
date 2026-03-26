@@ -8,9 +8,19 @@ import Art from "./components/Art.jsx"
 import Menu from "./components/Menu.jsx"
 import Contact from "./components/Contacts.jsx"
 
+import { useEffect } from "react";
+import { track } from "./analytics.js"; 
+
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const App = () => {
+  useEffect(() => {
+    track("page_view", {
+      url: window.location.href,
+      title: document.title,
+    });
+  }, []); 
+
   return (
     <main>
       <Navbar />
