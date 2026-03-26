@@ -4,7 +4,7 @@ import { allCocktails } from "../../constants/index.js";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { getAnalytics } from "../analytics.js"; // ← add this
+import { track } from "../analytics.js"; // ← add this
 
 const Menu = () => {
   const contentRef = useRef();
@@ -34,10 +34,7 @@ const Menu = () => {
   const goToSlide = (index, cocktailName, trigger) => {
     // ← add cocktailName and trigger params
     const newIndex = (index + totalCocktails) % totalCocktails;
-    getAnalytics().track("menu_cocktail_changed", {
-      cocktail: cocktailName,
-      trigger,
-    }); // ← track here
+    track("menu_button_clicked", { button_id: trigger, button_text: cocktailName }); // ← track here
     setCurrentIndex(newIndex);
   };
 

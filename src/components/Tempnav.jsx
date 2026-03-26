@@ -1,7 +1,7 @@
 import { navLinks } from '../../constants/index.js';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { getAnalytics } from "../analytics.js";
+import { track } from "../analytics.js";
 
 const Navbar = () => {
   useGSAP(() => {
@@ -30,14 +30,18 @@ const Navbar = () => {
     <nav>
       <div>
         <a href="#home" className="flex items-center gap-2">
-          <img src='/images/logo.png' alt='logo' />
+          <img src="/images/logo.png" alt="logo" />
           <p>Velvet Pour</p>
         </a>
 
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`} onClick={() => getAnalytics().track(`nav_${link.title}_clicked`, {link: link.title})}>{link.title}</a>
+              <a
+                href={`#${link.id}`}
+                onClick={() => track(`nav_${link.title}_clicked`, {button_id: "nav", button_text: link.title,})}>
+                {link.title}
+              </a>
             </li>
           ))}
         </ul>
